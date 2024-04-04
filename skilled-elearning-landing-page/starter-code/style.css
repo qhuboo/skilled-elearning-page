@@ -1,0 +1,328 @@
+/* ************************** CSS RESET ******************************* */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* ************************** CSS RESET ******************************* */
+
+/* ************************** FONTS / VARIABLES ******************************* */
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("./assets/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 800;
+  font-display: fallback;
+}
+
+html {
+  --orange-to-pink-gradient: linear-gradient(360deg, #f02aa6, #ff6f48);
+}
+
+/* ************************** FONTS ******************************* */
+
+html {
+  overflow: auto;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: "Plus Jakarta Sans";
+}
+body {
+  background: linear-gradient(180deg, #fff 0%, #f0f1ff 100%);
+  background-repeat: no-repeat;
+}
+
+.maxwidth-wrapper {
+  /* border: 2px solid chartreuse; */
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.maxwidth-wrapper-inner {
+  /* border: 2px solid red; */
+  max-width: 78%;
+  margin: 0 auto;
+}
+
+button {
+  width: 167px;
+  height: 56px;
+  border: none;
+  border-radius: 28px;
+  font-weight: 700;
+  color: white;
+}
+
+/* *********************** NAVIGATION DESKTOP ************************* */
+
+nav {
+  /* border: 3px solid springgreen; */
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > button {
+  background-color: #13183f;
+}
+
+.logo {
+  width: 114px;
+  height: 45px;
+  display: grid;
+  place-content: center;
+}
+
+.logo > img {
+  width: 100%;
+  padding: 0;
+}
+
+/* ******************* HEADER DESKTOP *************************** */
+
+header {
+  /* border: 3px dashed red; */
+  padding-top: 160px;
+  padding-bottom: 226px;
+}
+
+.header-wrapper {
+  /* border: 3px solid purple; */
+  max-width: 42%;
+}
+
+header h1 {
+  font-size: 56px;
+  line-height: 70px;
+  margin-bottom: 29px;
+}
+
+header p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 40px;
+  color: #83869a;
+}
+
+header button {
+  background: var(--orange-to-pink-gradient);
+}
+
+.image-hero-desktop {
+  display: revert;
+}
+
+.image-hero-tablet {
+  display: none;
+}
+
+.image-hero-mobile {
+  display: none;
+}
+
+.hero-image {
+  position: absolute;
+  width: 991px;
+  height: 937px;
+  top: -135px;
+  right: -310px;
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+/* ********************* TABLET ************************* */
+@media screen and (max-width: 1110px) {
+  .maxwidth-wrapper-inner {
+    max-width: 90%;
+  }
+
+  .header-wrapper {
+    max-width: 60%;
+  }
+
+  nav > button {
+    width: 140px;
+    height: 48px;
+  }
+
+  .logo {
+    width: 89px;
+    height: 35px;
+  }
+
+  header {
+    padding-top: 80px;
+    padding-bottom: 226px;
+  }
+
+  header h1 {
+    font-size: 40px;
+    line-height: 51px;
+    margin-bottom: 29px;
+  }
+
+  header p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 40px;
+    color: #83869a;
+  }
+
+  .image-hero-desktop {
+    display: none;
+  }
+
+  .image-hero-tablet {
+    display: revert;
+  }
+
+  .image-hero-mobile {
+    display: none;
+  }
+
+  .hero-image {
+    position: absolute;
+    width: 680px;
+    height: 680px;
+    top: -85px;
+    right: -260px;
+  }
+}
+
+/* ******************************* MOBILE ***************************** */
+@media screen and (max-width: 600px) {
+  .maxwidth-wrapper-inner {
+    max-width: 92%;
+  }
+
+  nav {
+    padding-top: 16px;
+    line-height: 0;
+  }
+
+  .image-hero-desktop {
+    display: none;
+  }
+
+  .image-hero-tablet {
+    display: none;
+  }
+
+  .image-hero-mobile {
+    display: revert;
+  }
+
+  header {
+    padding-top: 36px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-wrapper {
+    max-width: 100%;
+  }
+
+  header h1 {
+    font-size: 40px;
+    line-height: 51px;
+    margin-bottom: 26px;
+  }
+
+  header p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 26px;
+    color: #83869a;
+  }
+
+  header button {
+    background: var(--orange-to-pink-gradient);
+  }
+
+  .image-hero-desktop {
+    display: none;
+  }
+
+  .image-hero-tablet {
+    display: none;
+  }
+
+  .image-hero-mobile {
+    display: revert;
+  }
+
+  .hero-image {
+    position: revert;
+    max-width: 135%;
+    height: auto;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+}
