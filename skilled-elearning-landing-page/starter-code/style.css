@@ -125,6 +125,11 @@ nav {
 
 nav > button {
   background-color: #13183f;
+  z-index: 2;
+}
+
+nav > button:hover {
+  background-color: #666ca3;
 }
 
 .logo {
@@ -144,7 +149,7 @@ nav > button {
 header {
   /* border: 3px dashed red; */
   padding-top: 160px;
-  padding-bottom: 226px;
+  padding-bottom: 236px;
 }
 
 .header-wrapper {
@@ -168,6 +173,19 @@ header p {
 
 header button {
   background: var(--orange-to-pink-gradient);
+  border-radius: 31.5px;
+}
+
+header button:hover {
+  background: var(
+    --Gradient-1-Hover,
+    linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    ),
+    linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%)
+  );
 }
 
 .image-hero-desktop {
@@ -208,6 +226,7 @@ header button {
 
 article:not(:first-child) {
   /* border: 2px solid red; */
+  position: relative;
   border-radius: 15px;
   min-height: 322px;
   display: flex;
@@ -248,6 +267,12 @@ article:first-child h2 {
   color: white;
   font-size: 32px;
   line-height: 40px;
+}
+
+article .icon {
+  position: absolute;
+  top: -21px;
+  left: 32px;
 }
 
 /* ******************************* FOOTER DESKTOP ************************* */
