@@ -82,13 +82,14 @@ body {
   min-height: 100%;
   font-family: "Plus Jakarta Sans";
 }
-body {
+
+.main {
   background: linear-gradient(180deg, #fff 0%, #f0f1ff 100%);
   background-repeat: no-repeat;
 }
 
 .maxwidth-wrapper {
-  border: 2px solid chartreuse;
+  /* border: 2px solid chartreuse; */
   max-width: 1440px;
   margin: 0 auto;
   overflow: hidden;
@@ -107,6 +108,8 @@ button {
   border: none;
   border-radius: 28px;
   font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
   color: white;
 }
 
@@ -185,6 +188,7 @@ header button {
   height: 937px;
   top: -135px;
   right: -310px;
+  z-index: 1;
 }
 
 .hero-image img {
@@ -199,6 +203,7 @@ header button {
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   row-gap: 80px;
   column-gap: 30px;
+  padding-bottom: 140px;
 }
 
 article:not(:first-child) {
@@ -245,6 +250,27 @@ article:first-child h2 {
   line-height: 40px;
 }
 
+/* ******************************* FOOTER DESKTOP ************************* */
+
+footer {
+  background-color: #13183f;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-wrapper {
+  /* border: 2px solid springgreen; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-wrapper button {
+  background: linear-gradient(180deg, #4851ff, #f02aa6);
+}
+
 /* ********************* TABLET ************************* */
 @media screen and (max-width: 1110px) {
   .maxwidth-wrapper-inner {
@@ -258,6 +284,7 @@ article:first-child h2 {
   nav > button {
     width: 140px;
     height: 48px;
+    font-size: 16px;
   }
 
   .logo {
@@ -310,6 +337,7 @@ article:first-child h2 {
     grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
     row-gap: 56px;
     column-gap: 10px;
+    padding-bottom: 86px;
   }
 
   article:not(:first-child) {
@@ -346,6 +374,13 @@ article:first-child h2 {
     color: white;
     font-size: 24px;
     line-height: 32px;
+  }
+
+  /* ****** FOOTER MOBILE ******** */
+  .footer-wrapper button {
+    width: 140px;
+    height: 48px;
+    font-size: 16px;
   }
 }
 
@@ -429,6 +464,7 @@ article:first-child h2 {
   .courses-wrapper {
     grid-template-columns: repeat(auto-fill, 1fr);
     row-gap: 40px;
+    padding-bottom: 80px;
   }
 
   article:not(:first-child) {
@@ -465,5 +501,14 @@ article:first-child h2 {
     color: white;
     font-size: 24px;
     line-height: 32px;
+  }
+}
+
+/* *********************** XS-MOBILE ************************** */
+
+@media screen and (max-width: 360px) {
+  /* ******* CONTENT GRID XS-MOBILE ********* */
+  .courses-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
